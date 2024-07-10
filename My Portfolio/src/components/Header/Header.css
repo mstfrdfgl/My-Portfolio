@@ -1,0 +1,274 @@
+/* src/components/Header.css */
+
+header {
+  background: linear-gradient(to right, #4731d3 76.5%, #cbf281 24%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #cbf281;
+  padding-top: 2rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+  width: 350px;
+  gap: 10px;
+  padding-top: 0.1rem;
+}
+
+.language-switch,
+.dark-mode-toggle {
+  color: #4e0eff;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.language-switch {
+  background-color: #4731d3;
+  color: #cbf281;
+}
+.dark-mode-toggle {
+  background-color: #cbf281;
+  color: #4731d3;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 2.5rem 0 6rem 0;
+}
+
+.text-section {
+  display: flex;
+  flex: 1;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 300px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  color: #cbf281;
+  width: 50%;
+  margin: 0;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 65%;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #3730a3;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn.github::before {
+  content: url("../../assets/github.png"); /* Replace with actual path to GitHub icon */
+  margin-right: 10px;
+}
+
+.btn.linkedin::before {
+  content: url("../../assets/LinkedIn.png"); /* Replace with actual path to LinkedIn icon */
+  margin-right: 10px;
+}
+
+.image-section {
+  width: auto;
+  height: auto;
+}
+
+.image-section img {
+  width: 80%;
+  height: 80%;
+  border-radius: 18px;
+}
+/* Responsive Styling */
+@media (max-width: 1440px) {
+  header {
+    background: linear-gradient(to right, #4731d3 73%, #cbf281 27%);
+  }
+}
+@media (max-width: 976px) {
+  header {
+    background: linear-gradient(to right, #4731d3 67%, #cbf281 33%);
+  }
+}
+@media (max-width: 768px) {
+  header {
+    background: linear-gradient(to right, #4731d3 100%, #cbf281 50%);
+    background: linear-gradient(to bottom, #4731d3 50%, #cbf281 50%);
+  }
+  .header-top,
+  .header-content {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section {
+    text-align: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .text-section h1 {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  .text-section p {
+    width: 100%;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .image-section img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    background: linear-gradient(to bottom, #4731d3 50%, #cbf281 50%);
+  }
+  .text-section h1 {
+    font-size: 2rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .controls {
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .header-content {
+    margin: 2rem 0 4rem 0;
+  }
+}
+/* .theme-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-checkbox {
+  --toggle-size: 0.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 6.25em;
+  height: 3.125em;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #efefef),
+      color-stop(50%, #2a2a2a)
+    )
+    no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+  margin-right: 10px; 
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #efefef),
+      color-stop(50%, #2a2a2a)
+    )
+    no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+} */
