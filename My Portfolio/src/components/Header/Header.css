@@ -1,7 +1,5 @@
-/* src/components/Header.css */
-
 header {
-  background: linear-gradient(to right, #4731d3 76.5%, #cbf281 24%);
+  background: linear-gradient(to right, #4731d3 66%, #cbf281 34%);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -9,10 +7,14 @@ header {
   width: 100%;
 }
 
+header.dark-mode {
+  background: linear-gradient(to right, #171043 66%, #1a210b 34%);
+}
+
 .header-top {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 50%;
 }
 
 .brand {
@@ -32,7 +34,7 @@ header {
 
 .language-switch,
 .dark-mode-toggle {
-  color: #4e0eff;
+  color: #4731d3;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -42,15 +44,28 @@ header {
   background-color: #4731d3;
   color: #cbf281;
 }
+.language-switch.dark-mode {
+  background-color: #171043;
+  color: #bab2e7;
+}
+.d9d9d9 {
+  color: #d9d9d9;
+}
+
 .dark-mode-toggle {
   background-color: #cbf281;
   color: #4731d3;
 }
+.dark-mode-toggle.dark-mode {
+  background-color: #1a210b;
+  color: #fff;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 50%;
   margin: 2.5rem 0 6rem 0;
 }
 
@@ -95,16 +110,24 @@ header {
   align-items: center;
 }
 
+.btn.dark-mode {
+  background-color: #252128;
+  color: #fff;
+}
+
 .btn.github::before {
-  content: url("../../assets/github.png"); /* Replace with actual path to GitHub icon */
+  content: url("../../assets/github.png");
   margin-right: 10px;
 }
 
 .btn.linkedin::before {
-  content: url("../../assets/LinkedIn.png"); /* Replace with actual path to LinkedIn icon */
+  content: url("../../assets/LinkedIn.png");
   margin-right: 10px;
 }
-
+body.dark-mode .btn.github::before,
+body.dark-mode .btn.linkedin::before {
+  filter: brightness(0) invert(1);
+}
 .image-section {
   width: auto;
   height: auto;
@@ -115,21 +138,24 @@ header {
   height: 80%;
   border-radius: 18px;
 }
-/* Responsive Styling */
+
 @media (max-width: 1440px) {
   header {
-    background: linear-gradient(to right, #4731d3 73%, #cbf281 27%);
+    background: linear-gradient(to right, #4731d3 62%, #cbf281 27%);
+  }
+  header.dark-mode {
+    background: linear-gradient(to right, #171043 62%, #1a210b 27%);
   }
 }
+
 @media (max-width: 976px) {
   header {
-    background: linear-gradient(to right, #4731d3 67%, #cbf281 33%);
-  }
-}
-@media (max-width: 768px) {
-  header {
     background: linear-gradient(to right, #4731d3 100%, #cbf281 50%);
-    background: linear-gradient(to bottom, #4731d3 50%, #cbf281 50%);
+    background: linear-gradient(to bottom, #4731d3 100%, #cbf281 50%);
+  }
+  header.dark-mode {
+    background: linear-gradient(to right, #171043 100%, #1a210b 50%);
+    background: linear-gradient(to bottom, #171043 100%, #1a210b 50%);
   }
   .header-top,
   .header-content {
@@ -164,7 +190,7 @@ header {
   }
 
   .image-section {
-    width: 100%;
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +205,7 @@ header {
 
 @media (max-width: 480px) {
   header {
-    background: linear-gradient(to bottom, #4731d3 50%, #cbf281 50%);
+    background: linear-gradient(to bottom, #4731d3 100%, #cbf281 49.2%);
   }
   .text-section h1 {
     font-size: 2rem;
@@ -203,72 +229,7 @@ header {
   .header-content {
     margin: 2rem 0 4rem 0;
   }
+  .image-section {
+    width: 100%;
+  }
 }
-/* .theme-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.theme-checkbox {
-  --toggle-size: 0.4rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 6.25em;
-  height: 3.125em;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(50%, #efefef),
-      color-stop(50%, #2a2a2a)
-    )
-    no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background-size: 205%;
-  background-position: 0;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 99em;
-  position: relative;
-  cursor: pointer;
-  font-size: var(--toggle-size);
-  margin-right: 10px; 
-}
-
-.theme-checkbox::before {
-  content: "";
-  width: 2.25em;
-  height: 2.25em;
-  position: absolute;
-  top: 0.438em;
-  left: 0.438em;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(50%, #efefef),
-      color-stop(50%, #2a2a2a)
-    )
-    no-repeat;
-  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
-  background-size: 205%;
-  background-position: 100%;
-  border-radius: 50%;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.theme-checkbox:checked::before {
-  left: calc(100% - 2.25em - 0.438em);
-  background-position: 0;
-}
-
-.theme-checkbox:checked {
-  background-position: 100%;
-} */

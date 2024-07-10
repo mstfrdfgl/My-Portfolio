@@ -1,21 +1,41 @@
-// src/components/Header.js
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Header.css";
 import headerRight from "../../assets/hero-right.png";
+import { MyContext } from "../context/MyContext";
 
 export default function Header() {
+  const { darkMode, setDarkMode } = useContext(MyContext);
+  // const [darkMode, setDarkMode] = useState(() => {
+  //   return localStorage.getItem("darkMode") === "true";
+  // });
+
+  function handleDarkMode() {
+    setDarkMode((prevValue) => {
+      return !prevValue;
+    });
+  }
+  // useEffect(() => {
+  //   if (darkMode) {
+  //     document.body.classList.add("dark-mode");
+  //   } else {
+  //     document.body.classList.remove("dark-mode");
+  //   }
+  //   localStorage.setItem("darkMode", darkMode);
+  // }, [darkMode]);
+
   return (
-    <header>
+    <header className={darkMode ? "dark-mode" : ""}>
       <div className="header-top">
         <span className="brand">almila</span>
         <div className="controls">
-          <button className="language-switch">TÜRKÇE'YE GEÇ</button>
-
-          <button className="dark-mode-toggle">
-            {/* <label>
-              <input type="checkbox" className="theme-checkbox"></input>
-            </label> */}
-            DARK MODE
+          <button className={`language-switch ${darkMode ? "dark-mode" : ""}`}>
+            TÜRKÇE<span className="d9d9d9">'YE GEÇ</span>
+          </button>
+          <button
+            className={`dark-mode-toggle ${darkMode ? "dark-mode" : ""}`}
+            onClick={handleDarkMode}
+          >
+            {darkMode ? "LIGHT MODE" : "DARK MODE"}
           </button>
         </div>
       </div>
@@ -27,8 +47,12 @@ export default function Header() {
             great user experiences.
           </p>
           <div className="buttons">
-            <button className="btn github">Github</button>
-            <button className="btn linkedin">LinkedIn</button>
+            <button className={`btn github ${darkMode ? "dark-mode" : ""}`}>
+              Github
+            </button>
+            <button className={`btn linkedin ${darkMode ? "dark-mode" : ""}`}>
+              LinkedIn
+            </button>
           </div>
         </div>
         <div className="image-section">
