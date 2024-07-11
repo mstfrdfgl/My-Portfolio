@@ -1,14 +1,17 @@
-import React from "react";
+import { MyContextProvider } from "./components/context/MyContext";
 import Header from "./components/Header/Header";
 import Skills from "./components/Skills/Skills";
+import Profile from "./components/Profile/Profile";
 import "./App.css";
-import { MyContextProvider } from "./components/context/MyContext";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
     <MyContextProvider>
       <Header />
       <Skills />
+      <Profile />
+      <Projects />
     </MyContextProvider>
   );
 }

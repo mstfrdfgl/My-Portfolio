@@ -1,6 +1,6 @@
 import js from "../../assets/js.png";
 import react from "../../assets/react.png";
-import redux from "../../assets/redux.png";
+import redux from "../../assets/reduxx.png";
 import node from "../../assets/node.png";
 import vscode from "../../assets/vscode.png";
 import figma from "../../assets/figma.png";
