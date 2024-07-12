@@ -43,6 +43,7 @@ header.dark-mode {
 .language-switch {
   background-color: #4731d3;
   color: #cbf281;
+  min-width: 101px;
 }
 .language-switch.dark-mode {
   background-color: #171043;
@@ -116,12 +117,12 @@ header.dark-mode {
 }
 
 .btn.github::before {
-  content: url("../../assets/github.png");
+  content: url("/images/github.png");
   margin-right: 10px;
 }
 
 .btn.linkedin::before {
-  content: url("../../assets/LinkedIn.png");
+  content: url("/images/LinkedIn.png");
   margin-right: 10px;
 }
 body.dark-mode .btn.github::before,

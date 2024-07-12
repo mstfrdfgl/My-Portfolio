@@ -1,0 +1,19 @@
+{
+  "darkMode": "KARANLIK MOD",
+  "lightMode": "AYDINLIK MOD",
+  "headline": "Ben Frontend Geliştiricisiyim...",
+  "description": "...sürekli kullanıcı deneyimi odaklı sağlam ve ölçeklenebilir frontend ürünleri geliştiren biriyim.",
+  "skills-title": "Yeteneklerim",
+  "profile-title": "Profil",
+  "basic information": "Temel Bilgiler",
+  "date of birth": "Doğum Tarihi",
+  "date": "24.03.1996",
+  "city of residence": "İkamet Şehri",
+  "education status": "Eğitim Durumu",
+  "education": "Hacettepe üniv. Biyoloji lisans, 2016",
+  "preferred role": "Tercih Ettiği Rol",
+  "about me": "Hakkımda",
+  "about me textone": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, adit laborum aliquam voluptatum nisi mollitia.",
+  "about me texttwo": "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+  "project-descriptionfirst": "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimal kurulum çerez eklentisi. Bu, vanilla JS, SCSS ve Parcel Bundler ile oluşturuldu ve bir NPM paketi olarak mevcut ve git deposu, kod ve temalarda her türlü özelleştirmeyi mümkün kılıyor."
+}
