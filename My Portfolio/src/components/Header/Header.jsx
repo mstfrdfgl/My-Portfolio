@@ -1,27 +1,16 @@
-import React, { useState, useEffect, useContext } from "react";
-import "./Header.css";
-import headerRight from "../../assets/hero-right.png";
+import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
+import headerRight from "../../../public/images/hero-right.png";
+import "./Header.css";
 
 export default function Header() {
   const { darkMode, setDarkMode } = useContext(MyContext);
-  // const [darkMode, setDarkMode] = useState(() => {
-  //   return localStorage.getItem("darkMode") === "true";
-  // });
 
   function handleDarkMode() {
     setDarkMode((prevValue) => {
       return !prevValue;
     });
   }
-  // useEffect(() => {
-  //   if (darkMode) {
-  //     document.body.classList.add("dark-mode");
-  //   } else {
-  //     document.body.classList.remove("dark-mode");
-  //   }
-  //   localStorage.setItem("darkMode", darkMode);
-  // }, [darkMode]);
 
   return (
     <header className={darkMode ? "dark-mode" : ""}>

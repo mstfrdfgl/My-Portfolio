@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import "./Project.css";
 import { MyContext } from "../context/MyContext";
+import "./Project.css";
 
 export default function Project({
   title,

@@ -1,5 +1,5 @@
-import workintechpng from "../../assets/workintech.png";
-import journeypng from "../../assets/journey.png";
+import workintechpng from "../../../public/images/workintech.png";
+import journeypng from "../../../public/images/journey.png";
 
 export const projectData = [
   {

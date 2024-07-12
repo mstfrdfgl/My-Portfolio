@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
-import profileImage from "../../assets/profileimg.png"; // Replace with the correct path
+import profileImage from "../../../public/images/profileimg.png"; // Replace with the correct path
 import "./Profile.css";
 
 export default function Profile() {
