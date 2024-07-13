@@ -1,9 +1,9 @@
-import js from "../../../public/images/js.png";
-import react from "../../../public/images/react.png";
-import redux from "../../../public/images/reduxx.png";
-import node from "../../../public/images/node.png";
-import vscode from "../../../public/images/vscode.png";
-import figma from "../../../public/images/figma.png";
+import js from "/images/js.png";
+import react from "/images/react.png";
+import redux from "/images/reduxx.png";
+import node from "/images/node.png";
+import vscode from "/images/vscode.png";
+import figma from "/images/figma.png";
 
 const skillsData = [
   {

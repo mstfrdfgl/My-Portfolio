@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
 import "./Project.css";
+import { useTranslation } from "react-i18next";
 
 export default function Project({
   title,
@@ -11,6 +12,7 @@ export default function Project({
   image,
 }) {
   const { darkMode } = useContext(MyContext);
+  const { t } = useTranslation();
   return (
     <div className={`project ${darkMode ? "dark-mode" : ""}`}>
       <img src={image} alt={`project image`} className="project-image" />
@@ -35,7 +37,7 @@ export default function Project({
             rel="noopener noreferrer"
             className={`links-a ${darkMode ? "dark-mode" : ""}`}
           >
-            View Site
+            {t("project-links-first")}
           </a>
           <a
             href={githubLink}

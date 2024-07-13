@@ -15,5 +15,8 @@
   "about me": "Hakkımda",
   "about me textone": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, adit laborum aliquam voluptatum nisi mollitia.",
   "about me texttwo": "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
-  "project-descriptionfirst": "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimal kurulum çerez eklentisi. Bu, vanilla JS, SCSS ve Parcel Bundler ile oluşturuldu ve bir NPM paketi olarak mevcut ve git deposu, kod ve temalarda her türlü özelleştirmeyi mümkün kılıyor."
+  "projects": "Projelerim",
+  "project-links-first": "Siteyi Görüntüle",
+  "footer-send-me-a-message": "Bana mesaj gönder",
+  "footer-question": "Bir sorunuz ya da öneriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Buyurun."
 }

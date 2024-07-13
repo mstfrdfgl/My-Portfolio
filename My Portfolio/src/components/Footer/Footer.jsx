@@ -2,17 +2,20 @@ import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
 import { FaInstagram, FaCodepen } from "react-icons/fa";
 import { FiTwitter, FiAtSign } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+
 import "./Footer.css";
 
 export default function Footer() {
   const { darkMode } = useContext(MyContext);
+  const { t } = useTranslation();
   return (
     <footer className={darkMode ? "dark-mode" : ""}>
       <div className="footer-container">
-        <h3 className={darkMode ? "dark-mode" : ""}>Send me a message!</h3>
-        <p className={darkMode ? "dark-mode" : ""}>
-          Got a question or proposal, or just want to say hello? Go ahead.
-        </p>
+        <h3 className={darkMode ? "dark-mode" : ""}>
+          {t("footer-send-me-a-message")}
+        </h3>
+        <p className={darkMode ? "dark-mode" : ""}>{t("footer-question")}</p>
         <a
           href="mailto:almilasucode@gmail.com"
           className={`email ${darkMode ? "dark-mode" : ""}`}

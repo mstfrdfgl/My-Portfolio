@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
-import profileImage from "../../../public/images/profileimg.png"; // Replace with the correct path
-import "./Profile.css";
+import profileImage from "/images/profileimg.png";
 import { useTranslation } from "react-i18next";
+import "./Profile.css";
 
 export default function Profile() {
   const { darkMode } = useContext(MyContext);
