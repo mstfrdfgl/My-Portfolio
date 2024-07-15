@@ -40,6 +40,12 @@ header.dark-mode {
   cursor: pointer;
   font-size: 0.8rem;
 }
+.language-switch:focus {
+  outline: 0;
+}
+.dark-mode-toggle:focus {
+  outline: 0;
+}
 .language-switch {
   background-color: #4731d3;
   color: #cbf281;
@@ -70,34 +76,34 @@ header.dark-mode {
   margin: 2.5rem 0 6rem 0;
 }
 
-.text-section {
+/* .text-section {
   display: flex;
   flex: 1;
   text-align: left;
   flex-direction: column;
   justify-content: flex-end;
   height: 300px;
-}
+  gap: 1rem;
+} */
 
-.text-section h1 {
+/* .text-section h1 {
   font-size: 3rem;
+  font-weight: bold;
   color: #cbf281;
-  width: 50%;
+  width: 70%;
   margin: 0;
-}
+} */
 
-.text-section p {
-  font-size: 1.2rem;
+/* .text-section p {
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
   width: 65%;
-}
-
-.buttons {
+} */
+/* .buttons {
   display: flex;
   gap: 10px;
-}
+} */
 
 .btn {
   background-color: #fff;
@@ -110,7 +116,9 @@ header.dark-mode {
   display: flex;
   align-items: center;
 }
-
+.btn:focus {
+  outline: 0;
+}
 .btn.dark-mode {
   background-color: #252128;
   color: #fff;
@@ -129,26 +137,46 @@ body.dark-mode .btn.github::before,
 body.dark-mode .btn.linkedin::before {
   filter: brightness(0) invert(1);
 }
-.image-section {
+/* .image-section {
   width: auto;
   height: auto;
-}
+} */
 
-.image-section img {
+/* .image-section img {
   width: 80%;
   height: 80%;
   border-radius: 18px;
-}
-
-@media (max-width: 1440px) {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+} */
+@media (max-width: 1550px) {
   header {
-    background: linear-gradient(to right, #4731d3 62%, #cbf281 27%);
+    background: linear-gradient(to right, #4731d3 64%, #cbf281 36%);
   }
   header.dark-mode {
-    background: linear-gradient(to right, #171043 62%, #1a210b 27%);
+    background: linear-gradient(to right, #171043 64%, #1a210b 36%);
   }
 }
-
+@media (max-width: 1440px) {
+  header {
+    background: linear-gradient(to right, #4731d3 73%, #cbf281 27%);
+  }
+  header.dark-mode {
+    background: linear-gradient(to right, #171043 73%, #1a210b 27%);
+  }
+  .header-top,
+  .header-content {
+    width: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    background: linear-gradient(to right, #4731d3 68%, #cbf281 32%);
+  }
+  header.dark-mode {
+    background: linear-gradient(to right, #171043 68%, #1a210b 32%);
+  }
+}
 @media (max-width: 976px) {
   header {
     background: linear-gradient(to right, #4731d3 100%, #cbf281 50%);
@@ -165,20 +193,20 @@ body.dark-mode .btn.linkedin::before {
     align-items: center;
   }
 
-  .text-section {
+  /* .text-section {
     text-align: center;
     justify-content: center;
     height: auto;
-  }
+  } */
 
-  .text-section h1 {
+  /* .text-section h1 {
     width: 100%;
     font-size: 2.5rem;
-  }
+  } */
 
-  .text-section p {
+  /* .text-section p {
     width: 100%;
-  }
+  } */
 
   .controls {
     width: 100%;
@@ -186,35 +214,35 @@ body.dark-mode .btn.linkedin::before {
     padding-top: 1rem;
   }
 
-  .buttons {
+  /* .buttons {
     justify-content: center;
-  }
+  } */
 
-  .image-section {
-    width: 65%;
+  /* .image-section {
     display: flex;
+    width: 65%;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-  }
+  } */
 
-  .image-section img {
+  /* .image-section img {
     width: 60%;
     height: auto;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
   header {
     background: linear-gradient(to bottom, #4731d3 100%, #cbf281 49.2%);
   }
-  .text-section h1 {
+  /* .text-section h1 {
     font-size: 2rem;
-  }
+  } */
 
-  .text-section p {
+  /* .text-section p {
     font-size: 0.9rem;
-  }
+  } */
 
   .btn {
     padding: 8px 16px;
