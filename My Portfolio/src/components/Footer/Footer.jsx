@@ -11,7 +11,7 @@ export default function Footer() {
   const { t } = useTranslation();
   return (
     <footer className={darkMode ? "dark-mode" : ""}>
-      <div className="footer-container">
+      <div className="footer-container flex flex-col gap-4 w-[30%] my-0 mx-auto max-lg:w-[70%] max-md:w-[80%] max-sm:w-full">
         <h3 className={darkMode ? "dark-mode" : ""}>
           {t("footer-send-me-a-message")}
         </h3>
@@ -22,7 +22,7 @@ export default function Footer() {
         >
           almilasucode@gmail.com
         </a>
-        <div className="social-icons">
+        <div className="social-icons flex justify-center gap-4">
           <a
             href="https://twitter.com"
             target="_blank"

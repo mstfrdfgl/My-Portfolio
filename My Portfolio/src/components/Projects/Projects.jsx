@@ -11,7 +11,7 @@ export default function Projects() {
   const { t } = useTranslation();
   return (
     <section className={`projects-section ${darkMode ? "dark-mode" : ""}`}>
-      <div className="projects">
+      <div className="projects flex flex-col gap-0 my-0 mx-auto pt-16 pb-12 w-1/2 max-lg:w-[90%] p-0">
         <h2 className={`projects-h2 ${darkMode ? "dark-mode" : ""}`}>
           {t("projects")}
         </h2>

@@ -7,31 +7,30 @@ main {
 main.dark-mode {
   background-color: #171043;
 }
-.profile-container {
+/* .profile-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
-}
+} */
 
-.profile-title {
+/* .profile-title {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
-}
+} */
 
-.profile-content {
+/* .profile-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   text-align: left;
   gap: 1.5rem;
-}
+} */
 
-.basic-info,
+/* .basic-info,
 .about-me {
-  /* background-color: #4731d3; */
   color: #fff;
   width: 33%;
 }
@@ -39,7 +38,7 @@ main.dark-mode {
 .basic-info {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.25rem;
 }
 
 .about-me {
@@ -59,7 +58,6 @@ main.dark-mode {
 
 .basic-info p,
 .about-me p {
-  font-size: 1rem;
   font-weight: 300;
   margin: 5px 0;
 }
@@ -84,60 +82,57 @@ main.dark-mode {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
+} */
 
 /* Responsive Styling */
 @media (max-width: 1440px) {
-  .profile-container {
+  /* .profile-container {
     width: 70%;
-  }
+  } */
 
-  .profile-content {
+  /* .profile-content {
     gap: 1rem;
-  }
+  } */
 
-  .basic-info,
+  /* .basic-info,
   .about-me {
     width: 45%;
-  }
+  } */
 
-  .profile-title {
+  /* .profile-title {
     font-size: 2rem;
-  }
+  } */
 
-  .basic-info h2,
+  /* .basic-info h2,
   .about-me h2 {
     font-size: 1.8rem;
-  }
+  } */
 }
 @media (max-width: 976px) {
-  .profile-container {
+  /* .profile-container {
     width: 90%;
-  }
+  } */
 }
 @media (max-width: 768px) {
-  .profile-container {
-    width: 90%;
-  }
-
-  .profile-content {
+  /* .profile-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.25rem;
     align-items: center;
-  }
+  } */
 
-  .basic-info,
+  /* .basic-info,
   .about-me {
     width: 100%;
     text-align: center;
-  }
+    gap: 0.25rem;
+  } */
 
-  .profile-title {
+  /* .profile-title {
     font-size: 1.8rem;
     text-align: center;
-  }
+  } */
 
-  .basic-info p strong,
+  /* .basic-info p strong,
   .basic-info p span {
     width: 100%;
   }
@@ -150,23 +145,16 @@ main.dark-mode {
 
   .about-me {
     align-items: center;
-    text-align: center;
   }
 
   .about-me img {
     width: 80%;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
-  .profile-content {
-    align-items: center;
-  }
-  .profile-title {
+  /* .profile-title {
     font-size: 1.5rem;
-  }
-  .basic-info {
-    text-align: center;
   }
   .basic-info h2,
   .about-me h2 {
@@ -176,6 +164,5 @@ main.dark-mode {
   .basic-info p,
   .about-me p {
     font-size: 0.9rem;
-    text-align: center;
-  }
+  } */
 }

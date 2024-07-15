@@ -15,22 +15,26 @@ export default function Project({
   const { t } = useTranslation();
   return (
     <div className={`project ${darkMode ? "dark-mode" : ""}`}>
-      <img src={image} alt={`project image`} className="project-image" />
-      <div className="project-details">
+      <img
+        src={image}
+        alt={`project image`}
+        className="w-1/2 rounded-l-xl object-cover max-lg:w-[80%] max-lg:mx-auto max-lg:rounded-none"
+      />
+      <div className="project-details p-8 flex flex-col text-left justify-between">
         <h3 className={`project-details-h3 ${darkMode ? "dark-mode" : ""}`}>
           {title}
         </h3>
         <p className={`project-details-p ${darkMode ? "dark-mode" : ""}`}>
           {description}
         </p>
-        <div className="technologies">
+        <div className="flex gap-2 mb-2">
           {technologies.map((tech, index) => (
             <span key={index} className={`tech ${darkMode ? "dark-mode" : ""}`}>
               {tech}
             </span>
           ))}
         </div>
-        <div className="links">
+        <div className="links flex gap-8 max-lg:gap-4">
           <a
             href={liveLink}
             target="_blank"

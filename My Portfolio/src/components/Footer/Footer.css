@@ -6,13 +6,13 @@ footer {
 footer.dark-mode {
   background-color: #252128;
 }
-.footer-container {
+/* .footer-container {
   width: 30%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   gap: 1rem;
-}
+} */
 .footer-container h3 {
   color: #4731d3;
   font-size: 3rem;
@@ -47,11 +47,11 @@ footer.dark-mode {
   text-decoration: underline;
 }
 
-.footer-container .social-icons {
+/* .footer-container .social-icons {
   display: flex;
   justify-content: center;
   gap: 1rem;
-}
+} */
 
 .footer-container .social-icons a {
   color: #4731d3;
@@ -68,14 +68,14 @@ footer.dark-mode {
 }
 
 @media (max-width: 976px) {
-  .footer-container {
+  /* .footer-container {
     width: 70%;
-  }
+  } */
 }
 @media (max-width: 768px) {
-  .footer-container {
+  /* .footer-container {
     width: 80%;
-  }
+  } */
   .footer-container h2 {
     font-size: 1.5rem;
   }
