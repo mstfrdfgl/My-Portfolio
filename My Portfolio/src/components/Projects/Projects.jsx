@@ -1,4 +1,4 @@
-import { MyContext } from "../context/MyContext";
+import { MyContext } from "../../context/MyContext";
 import { useContext } from "react";
 import Project from "./Project";
 import { projectData } from "./projectData";

@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import { MyContext } from "../context/MyContext";
+import { MyContext } from "../../context/MyContext";
 import headerRight from "/images/hero-right.png";
 import { useTranslation } from "react-i18next";
 import "./Header.css";
 
 export default function Header() {
-  const { darkMode, setDarkMode } = useContext(MyContext);
-  const { t, i18n } = useTranslation();
+  const { darkMode, toggleDarkMode } = useContext(MyContext);
+  const { t } = useTranslation();
   const { language, changeLanguage } = useContext(MyContext);
 
   function handleDarkMode() {
-    setDarkMode((prevValue) => !prevValue);
+    toggleDarkMode(!darkMode);
   }
 
   function handleLanguageChange(lang) {

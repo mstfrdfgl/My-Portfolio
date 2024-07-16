@@ -1,4 +1,4 @@
-import { MyContextProvider } from "./components/context/MyContext";
+import { MyContextProvider } from "./context/MyContext";
 import Header from "./components/Header/Header";
 import Skills from "./components/Skills/Skills";
 import Profile from "./components/Profile/Profile";

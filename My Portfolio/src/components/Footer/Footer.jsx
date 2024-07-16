@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MyContext } from "../context/MyContext";
+import { MyContext } from "../../context/MyContext";
 import { FaInstagram, FaCodepen } from "react-icons/fa";
 import { FiTwitter, FiAtSign } from "react-icons/fi";
 import { useTranslation } from "react-i18next";

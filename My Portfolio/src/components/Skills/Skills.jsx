@@ -2,7 +2,8 @@ import { useContext } from "react";
 
 import skillsData from "./skillsData";
 import "./Skills.css";
-import { MyContext } from "../context/MyContext";
+import { MyContext } from "../../context/MyContext";
+
 import { useTranslation } from "react-i18next";
 
 const Skills = () => {
