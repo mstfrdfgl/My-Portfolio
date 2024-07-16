@@ -66,7 +66,7 @@ export default function Header() {
         </div>
         <div className="w-auto h-auto max-lg:flex max-lg:w-[65%] max-lg:justify-center max-lg:items-center max-lg:mt-5 ">
           <img
-            className="w-[80%] h-[80%] rounded-2xl shadow-2xl my-0 mx-auto max-lg:w-[60%] max-lg:h-auto"
+            className="w-[80%] min-w-[250px] h-[80%] rounded-2xl shadow-2xl my-0 mx-auto max-lg:w-[60%] max-lg:h-auto"
             src={headerRight}
             alt="Profile"
           />
