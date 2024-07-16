@@ -5,6 +5,7 @@ export const MyContext = createContext();
 const initialState = {
   darkMode: localStorage.getItem("darkMode") === "true",
   language: localStorage.getItem("language") || "en",
+  isModalOpen: false,
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -12,6 +13,8 @@ const reducer = (state, action) => {
       return { ...state, darkMode: action.payload };
     case "SET_LANGUAGE":
       return { ...state, language: action.payload };
+    case "TOGGLE_MODAL":
+      return { ...state, isModalOpen: action.payload };
     default:
       return state;
   }
@@ -39,6 +42,9 @@ export const MyContextProvider = ({ children }) => {
   const toggleDarkMode = (mode) => {
     dispatch({ type: "SET_DARK_MODE", payload: mode });
   };
+  const toggleModal = (isOpen) => {
+    dispatch({ type: "TOGGLE_MODAL", payload: isOpen });
+  };
   return (
     <MyContext.Provider
       value={{
@@ -46,6 +52,8 @@ export const MyContextProvider = ({ children }) => {
         toggleDarkMode,
         language: state.language,
         changeLanguage,
+        isModalOpen: state.isModalOpen,
+        toggleModal,
       }}
     >
       {children}

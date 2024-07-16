@@ -18,5 +18,14 @@
   "projects": "Projects",
   "project-links-first": "View Site",
   "footer-send-me-a-message": "Send me a message",
-  "footer-question": "Got a question or proposal, or just want to say hello? Go ahead."
+  "footer-question": "Got a question or proposal, or just want to say hello? Go ahead.",
+  "subscription": "Subscription",
+  "subscribe": "Subscribe",
+  "terms": "Accept Terms",
+  "email-error": "Please enter a valid email address",
+  "name-error": "Please enter your name.(max 100 characters)",
+  "terms-error": "You must accept the terms and conditions.",
+  "subs-success": "Subscription successfully!",
+  "already-subs": "Already subscribed",
+  "already-subs-text": "You are already subscribed with this email."
 }

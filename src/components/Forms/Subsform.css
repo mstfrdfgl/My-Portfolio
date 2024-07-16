@@ -1,0 +1,6 @@
+.form-container {
+  background-color: #4731d3;
+}
+.form-container.dark-mode {
+  background-color: #1a210b;
+}

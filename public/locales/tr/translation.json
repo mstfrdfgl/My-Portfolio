@@ -18,5 +18,14 @@
   "projects": "Projelerim",
   "project-links-first": "Siteyi Görüntüle",
   "footer-send-me-a-message": "Bana mesaj gönder",
-  "footer-question": "Bir sorunuz ya da öneriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Buyurun."
+  "footer-question": "Bir sorunuz ya da öneriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Buyurun.",
+  "subscription": "Abonelik",
+  "subscribe": "Abone Ol",
+  "terms": "Koşulları Kabul Et",
+  "email-error": "Lütfen geçerli bir mail adresi giriniz",
+  "name-error": "Lütfen isminizi giriniz.(en fazla 100 karakter)",
+  "terms-error": "Koşulları kabul etmelisin",
+  "subs-success": "Abonelik başarılı!",
+  "already-subs": "Zaten abonesin",
+  "already-subs-text": "Görünüşe göre bu email ile daha önceden abone olmuşsun."
 }
