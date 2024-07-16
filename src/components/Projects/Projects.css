@@ -1,0 +1,35 @@
+.projects-section {
+  background-color: #cbf281;
+  width: 100%;
+}
+.projects-section.dark-mode {
+  background-color: #1a210b;
+}
+/* .projects {
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+} */
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4731d3;
+  text-align: left;
+  font-weight: 700;
+}
+.projects-h2.dark-mode {
+  color: #cbf281;
+}
+@media (max-width: 976px) {
+  /* .projects {
+    width: 100%;
+    padding: 0;
+  } */
+  .projects h2 {
+    text-align: center;
+  }
+}
