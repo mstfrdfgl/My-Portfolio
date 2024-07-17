@@ -27,5 +27,11 @@
   "terms-error": "Koşulları kabul etmelisin",
   "subs-success": "Abonelik başarılı!",
   "already-subs": "Zaten abonesin",
-  "already-subs-text": "Görünüşe göre bu email ile daha önceden abone olmuşsun."
+  "already-subs-text": "Görünüşe göre bu email ile daha önceden abone olmuşsun.",
+  "subs-list": "Abonelerin Listesi",
+  "name": "İsim",
+  "loading-subscribers": "Abone listesi bekleniyor",
+  "error-fetching-subscribers": "Abone listesine erişilirken bir hata oluştu",
+  "subs-in-progress": "Abone olunuyor...",
+  "show-subs-button": "Aboneleri Göster"
 }

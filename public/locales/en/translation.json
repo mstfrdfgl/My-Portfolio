@@ -27,5 +27,11 @@
   "terms-error": "You must accept the terms and conditions.",
   "subs-success": "Subscription successfully!",
   "already-subs": "Already subscribed",
-  "already-subs-text": "You are already subscribed with this email."
+  "already-subs-text": "You are already subscribed with this email.",
+  "subs-list": "Subscribers List",
+  "name": "Name",
+  "loading-subscribers": "Waiting for fetching subscribers list",
+  "error-fetching-subscribers": "An error occurred while accessing the subscriber list",
+  "subs-in-progress": "Subscribing...",
+  "show-subs-button": "Show Subscribers"
 }

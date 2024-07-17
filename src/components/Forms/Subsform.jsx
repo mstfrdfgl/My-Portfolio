@@ -15,10 +15,15 @@ export default function Subsform() {
     formState: { errors },
     reset,
   } = useForm();
-  const { isModalOpen, toggleModal, darkMode } = useContext(MyContext);
+  const { isModalOpen, toggleModal, darkMode, addSubscriber, toggleShowSubs } =
+    useContext(MyContext);
   const { t } = useTranslation();
 
   const onSubmit = async (data) => {
+    const loadingToast = toast.loading(t("subs-in-progress"), {
+      position: "top-right",
+    });
+
     try {
       const response = await axios.get(
         "https://669693d20312447373c30fa2.mockapi.io/subscribers"
@@ -27,20 +32,32 @@ export default function Subsform() {
 
       if (existingSubscriptions.some((sub) => sub.email === data.email)) {
         toggleModal(true);
+        toast.dismiss(loadingToast);
         return;
       }
 
-      await axios.post(
+      const newSubscriber = await axios.post(
         "https://669693d20312447373c30fa2.mockapi.io/subscribers",
         data
       );
-      const subsSuccess = t("subs-success");
-      toast.success(subsSuccess, {
-        position: "top-right",
+
+      addSubscriber(newSubscriber.data);
+      toast.update(loadingToast, {
+        render: t("subs-success"),
+        type: "success",
+        isLoading: false,
+        autoClose: 5000,
       });
+
       reset();
     } catch (error) {
       console.error("Error during subscription:", error);
+      toast.update(loadingToast, {
+        render: t("subs-error"),
+        type: "error",
+        isLoading: false,
+        autoClose: 5000,
+      });
     }
   };
 
@@ -76,11 +93,11 @@ export default function Subsform() {
             {...register("name", {
               required: t("name-error"),
               maxLength: {
-                value: 50,
+                value: 100,
                 message: t("name-error"),
               },
             })}
-            placeholder="Name"
+            placeholder={t("name")}
             className="bg-white text-[#4731d3] border-0 rounded-md p-2 mb-4 focus:bg-[#caf281e0] focus:outline-none focus:ring-1 focus:ring-[#cbf281] transition ease-in-out duration-150"
             type="text"
           />
@@ -117,6 +134,14 @@ export default function Subsform() {
             {t("subscribe")}
           </button>
         </form>
+        <button
+          className={`form-button bg-gradient-to-r from-[#4731d3] to-[#cbf281] text-white font-bold py-2 px-4 rounded-md mt-4 border-0 ${
+            darkMode ? "bg-gradient-to-r from-[#252128] to-[#1a210b]" : ""
+          }`}
+          onClick={toggleShowSubs}
+        >
+          {t("show-subs-button")}
+        </button>
       </div>
 
       <ToastContainer />
