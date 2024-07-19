@@ -38,6 +38,7 @@ const reducer = (state, action) => {
 
 export const MyContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   //dark mode
   useEffect(() => {
     if (state.darkMode) {
@@ -47,11 +48,13 @@ export const MyContextProvider = ({ children }) => {
     }
     localStorage.setItem("darkMode", state.darkMode);
   }, [state.darkMode]);
+
   //dil seçenekleri
   useEffect(() => {
     localStorage.setItem("language", state.language);
     i18next.changeLanguage(state.language);
   }, [state.language]);
+
   //aboneler listesi
   useEffect(() => {
     const fetchSubscribers = async () => {
